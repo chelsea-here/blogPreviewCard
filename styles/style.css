@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Figtree";
-  src: url('Figtree-VariableFont_wght.ttf');
+  src: url("Figtree-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: "FigtreeSemiBold";
-  src: url('Figtree-SemiBold.ttf');
+  src: url("Figtree-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "FigtreeExtraBold";
-  src: url('Figtree-ExtraBold.ttf');
+  src: url("Figtree-ExtraBold.ttf");
 }
 
 * {
@@ -20,7 +20,9 @@
   font-style: normal;
 }
 
-*,*::after, *::before{
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,32 +36,34 @@
 }
 
 body {
-  margin: 0 auto;
   background-color: var(--primary-color-yellow);
-} 
-
-p {
-  font-size: 0.875rem;
 }
 
 h1 {
-  font-family: 'FigtreeExtraBold';
+  font-family: "FigtreeExtraBold";
   font-size: 1.5rem;
+  line-height: 150%;
 }
 
-.attribution { 
-  font-size: 0.6875rem; 
-  text-align: center; 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
   margin-top: 1.5rem;
+  line-height: 150%;
 }
 
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
-
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 .container {
-  margin: 0 auto;
   width: 24rem;
   background-color: var(--neutral-color-white);
   box-shadow: 0.5rem 0.5rem var(--neutral-color-black);
@@ -70,8 +74,7 @@ h1 {
 
 .wrapper img {
   height: 12.5rem;
-  width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 0.625rem;
 }
 
@@ -85,12 +88,14 @@ h1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-family: "FigtreeSemiBold";
+  font-size: 0.875rem;
+  line-height: 150%;
 }
 
 .description {
   font-size: 1rem;
   color: var(--neutral-color-grey);
-  line-height: 1.5rem;
+  line-height: 150%;
 }
 
 .content {
@@ -99,7 +104,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  outline: auto red;
 }
 
 .author {
@@ -107,8 +111,9 @@ h1 {
   flex-direction: row;
   object-fit: contain;
   align-items: center;
-  font-family: 'FigreeSemiBold';
-
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-family: "FigtreeSemiBold";
 }
 
 .author > img {
@@ -116,4 +121,8 @@ h1 {
   padding-right: 0.75rem;
 }
 
-
+.publish-date {
+  font-size: 0.875rem;
+  font-family: "Figtree";
+  line-height: 150%;
+}
