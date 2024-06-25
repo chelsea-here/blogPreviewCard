@@ -30,7 +30,7 @@
 :root {
   --primary-color-yellow: hsl(47, 88%, 63%);
   --neutral-color-white: hsl(0, 0%, 100%);
-  --neutral-color-grey: #7f7f7f;
+  --neutral-color-grey: hsl(0, 0%, 50%);
   --neutral-color-black: hsl(0, 0%, 7%);
 }
 
@@ -98,8 +98,6 @@ h1 {
 .description {
   font-size: 1rem;
   color: var(--neutral-color-grey);
-  font-family: "Figtree";
-  font-size: 500;
 }
 
 .author {
