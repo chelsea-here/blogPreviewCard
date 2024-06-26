@@ -66,15 +66,14 @@ main {
   /* although the style guide and figma showed 150% line height, I found that this created issues with alignment on the category 
   and publish date sections.  modifying it to be relative to text height resolved this issue. */
   line-height: 1.3125rem;
-  /* the margin left and right were necessary to add for very small screens - to keep the yellow background visible for 24px; */
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  /* the margin left and right were necessary to add for very small screens - to keep the yellow background visible and maintain comfortable white space.  
+  Note that I didnt use rem here because I dont want the margin size to change based on font height */
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 h1 {
   font-family: "FigtreeExtraBold";
-  font-style: "extra-bold";
-  font-weight: normal;
   font-size: var(--fs-h);
   line-height: 150%;
 }
@@ -86,11 +85,12 @@ h1:hover {
 } */
 
 .card-image {
-  display: flex;
-  height: fixed;
-  max-width: 100%;
-  /* by choosing cover for object fit property, the browser will crop the width of the image as needed for small screens while maintaining the height */
+  /* by choosing cover for object fit property, the browser will crop the width or height of the image as needed for small screens/text mods */
   object-fit: cover;
+  /* by choosing max-height as a rem value ive associated the height of the image with the height of the text making the card maintain the desired 
+  look even if user overrides font sizes. */
+  max-height: 12.5rem;
+  width: 100%;
   aspect-ratio: attr(width) / attr(height);
   border-radius: 0.625rem;
 }
