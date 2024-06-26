@@ -60,9 +60,13 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
+  /* in order to get the card to match pixels i used outline instead of border - preventing pixels taking up the padding space */
   outline: 1px solid var(--neutral-color-black);
   border-radius: 1.25rem;
+  /* although the style guide and figma showed 150% line height, I found that this created issues with alignment on the category 
+  and publish date sections.  modifying it to be relative to text height resolved this issue. */
   line-height: 1.3125rem;
+  /* the margin left and right were necessary to add for very small screens - to keep the yellow background visible for 24px; */
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -85,6 +89,7 @@ h1:hover {
   display: flex;
   height: fixed;
   max-width: 100%;
+  /* by choosing cover for object fit property, the browser will crop the width of the image as needed for small screens while maintaining the height */
   object-fit: cover;
   aspect-ratio: attr(width) / attr(height);
   border-radius: 0.625rem;
