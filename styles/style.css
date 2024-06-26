@@ -75,9 +75,11 @@ h1 {
   line-height: 150%;
 }
 
+/* considered using css for hover effect, but used javascript instead
+
 h1:hover {
   color: var(--primary-color-yellow);
-}
+} */
 
 .card-image {
   display: flex;
