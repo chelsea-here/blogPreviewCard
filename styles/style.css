@@ -63,6 +63,8 @@ main {
   outline: 1px solid var(--neutral-color-black);
   border-radius: 1.25rem;
   line-height: 1.3125rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 h1 {
@@ -73,9 +75,15 @@ h1 {
   line-height: 150%;
 }
 
+h1:hover {
+  color: var(--primary-color-yellow);
+}
+
 .card-image {
+  display: flex;
   height: fixed;
-  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
   aspect-ratio: attr(width) / attr(height);
   border-radius: 0.625rem;
 }
@@ -127,7 +135,7 @@ h1 {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
 }
 
 .attribution a {
