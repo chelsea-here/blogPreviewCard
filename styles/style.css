@@ -53,6 +53,7 @@ body {
 
 main {
   max-width: 24rem;
+  max-height: 32.625rem;
   padding: 1.5rem;
   background-color: var(--neutral-color-white);
   box-shadow: 0.5rem 0.5rem var(--neutral-color-black);
@@ -82,6 +83,10 @@ h1 {
 
 h1:hover {
   color: var(--primary-color-yellow);
+}
+
+h1:focus {
+color: var(--primary-color-yellow);
 } */
 
 .card-image {
