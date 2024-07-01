@@ -78,7 +78,6 @@ main {
 h1 {
   font-family: "FigtreeExtraBold";
   font-size: var(--fs-h);
-  line-height: 150%;
 }
 
 /* considered using css for hover effect, but wanted to challenge myself with javascript instead:
@@ -130,7 +129,6 @@ color: var(--primary-color-yellow);
   font-size: var(--fs-b-m);
   color: var(--neutral-color-grey);
   align-self: stretch;
-  line-height: 150%;
 }
 
 .author {
