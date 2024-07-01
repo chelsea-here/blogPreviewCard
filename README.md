@@ -45,9 +45,15 @@ Users should be able to:
 
 I decided to go back to the fundamentals for this project using vanilla html/css/js. It's helpful as I learn to remember the basics.
 
-Trying to associate font size with viewport dimensions instead of rem gets a bit complicated. CSS has recently developed (and browsers have largely adopted) Container Queries which can be used to create highly fluid typography. I did not end up persuing this method, as it was above and beyond what was required for the task, but I'm glad to know it now exists.
+Trying to associate font size with viewport dimensions instead of rem gets a bit complicated. CSS has recently developed (and browsers have largely adopted) Container Queries which can be used to create highly fluid typography. I did not end up persuing this method, as it was above and beyond what was required for the task. I used clamp which worked for my purposes, but I was glad to learn of the above.
 
 I was able to modify text color using css but wanted to challenge myself using javascript. See below for a piece of code I'm particularly proud of.
+
+```css
+h1 {
+  font-size: clamp(1rem, 5.333333vw, 1.5rem);
+}
+```
 
 ```js
 // accessing the color variables from my css file

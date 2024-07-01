@@ -37,10 +37,7 @@
   --neutral-color-grey: hsl(0, 0%, 50%);
   --neutral-color-black: hsl(0, 0%, 7%);
 
-  --fs-h: 1.5rem;
-  --fs-b-m: 1rem;
-  --fs-b-s: 0.875rem;
-  --fs-a: 0.6875rem;
+  --fs-a: clamp(0.34375rem, 3.73vw, 0.6875rem);
 }
 
 body {
@@ -67,9 +64,6 @@ main {
   /* in order to get the card to match pixels i used outline instead of border - preventing pixels taking up the padding space */
   outline: 1px solid var(--neutral-color-black);
   border-radius: 1.25rem;
-  /* although the style guide and figma showed 150% line height, I found that this created issues with alignment on the category 
-  and publish date sections.  modifying it to be relative to text height resolved this issue. */
-  line-height: 1.3125rem;
   /* the margin left and right were necessary to add for very small screens - to keep the yellow background visible and maintain comfortable white space.  
   Note that I didnt use rem here because I dont want the margin size to change based on font height */
   margin-bottom: 24px;
@@ -77,7 +71,13 @@ main {
 
 h1 {
   font-family: "FigtreeExtraBold";
-  font-size: var(--fs-h);
+  font-size: clamp(1rem, 5.333333vw, 1.5rem);
+  line-height: 150%;
+  font-weight: 800;
+}
+
+h1:hover {
+  cursor: pointer;
 }
 
 /* considered using css for hover effect, but wanted to challenge myself with javascript instead:
@@ -105,6 +105,7 @@ color: var(--primary-color-yellow);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  line-height: 150%;
 }
 
 .category {
@@ -117,18 +118,21 @@ color: var(--primary-color-yellow);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   font-family: "FigtreeSemiBold";
-  font-size: var(--fs-b-s);
+  font-size: clamp(0.4375rem, 3.2vw, 0.875rem);
+  font-weight: 800;
+  line-height: 150%;
 }
 
 .publish-date {
-  font-size: var(--fs-b-s);
-  white-space: pre;
+  font-size: clamp(0.4375rem, 3.2vw, 0.875rem);
+  line-height: 150%;
 }
 
 .description {
-  font-size: var(--fs-b-m);
+  font-size: clamp(0.5rem, 3.73333vw, 1rem);
   color: var(--neutral-color-grey);
   align-self: stretch;
+  line-height: 150%;
 }
 
 .author {
@@ -136,8 +140,9 @@ color: var(--primary-color-yellow);
   flex-direction: row;
   object-fit: contain;
   align-items: center;
-  font-size: var(--fs-b-s);
-  font-family: "FigtreeSemiBold";
+  font-size: 0.875rem;
+  font-family: "FigtreeExtraBold";
+  font-weight: 800;
 }
 
 .author > img {
@@ -147,10 +152,11 @@ color: var(--primary-color-yellow);
 
 .attribution {
   font-size: var(--fs-a);
+  line-height: 150%;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-  line-height: 1.3125rem;
+  line-height: 150%;
 }
