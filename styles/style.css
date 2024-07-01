@@ -40,6 +40,7 @@
   --fs-h: 1.5rem;
   --fs-b-m: 1rem;
   --fs-b-s: 0.875rem;
+  --fs-a: 0.6875rem;
 }
 
 body {
@@ -49,6 +50,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: var(--primary-color-yellow);
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 main {
@@ -69,8 +72,7 @@ main {
   line-height: 1.3125rem;
   /* the margin left and right were necessary to add for very small screens - to keep the yellow background visible and maintain comfortable white space.  
   Note that I didnt use rem here because I dont want the margin size to change based on font height */
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-bottom: 24px;
 }
 
 h1 {
@@ -79,7 +81,7 @@ h1 {
   line-height: 150%;
 }
 
-/* considered using css for hover effect, but used javascript instead
+/* considered using css for hover effect, but wanted to challenge myself with javascript instead:
 
 h1:hover {
   color: var(--primary-color-yellow);
@@ -120,7 +122,8 @@ color: var(--primary-color-yellow);
 }
 
 .publish-date {
-  font-size: 0.875rem;
+  font-size: var(--fs-b-s);
+  white-space: pre;
 }
 
 .description {
@@ -135,7 +138,7 @@ color: var(--primary-color-yellow);
   flex-direction: row;
   object-fit: contain;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: var(--fs-b-s);
   font-family: "FigtreeSemiBold";
 }
 
@@ -145,9 +148,8 @@ color: var(--primary-color-yellow);
 }
 
 .attribution {
-  font-size: 0.6875rem;
+  font-size: var(--fs-a);
   text-align: center;
-  margin: 1.5rem;
 }
 
 .attribution a {
